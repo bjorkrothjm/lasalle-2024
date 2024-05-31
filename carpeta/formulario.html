@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <form action="/route" method="post">
+        <label>Email: </label> <input type="text" name="email" required> <br>
+        <label>Fecha den nacimiento: </label> <input type="date" required> <br>
+        
+        <label>Género: </label>
+        <input type="radio" name="gender" value="male" required> Masculino
+        <input type="radio" name="gender" value="female" required> Femenino
+        <input type="radio" name="gender" value="nonbinary" required> No binario
+        <input type="radio" name="gender" value="anonym" required> Prefiero no decir <br>
+
+        <label>Color favorito: </label>
+        <select>
+            <option value="blue">Azul</option>
+            <option value="red" selected>Rojo</option>
+            <option value="green">Verde</option>
+            <option value="yellow">Amarilla</option>
+        </select> <br>
+
+        <label>Género de música favorito: </label>
+        <select>
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="blues">Blues</option>
+            <option value="jazz">Jazz</option>
+            <option value="classic">Classica</option>
+        </select> <br>
+
+        <label>Volumen inicial: </label>
+        <input type="range" id="vol" name="vol" min="0" max="11" value="8"> <br>
+        
+        <label>Aceptar condiciones: </label> <input type="checkbox" required> <br>
+
+        <input type="submit" value="Register">
+
+    </form>
+</body>
+</html>
