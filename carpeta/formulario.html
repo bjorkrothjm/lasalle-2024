@@ -9,16 +9,28 @@
 </head>
 <body>
     <h1>Formulario de registro para LSMusic</h1>
-    <fieldset>
-        <form action="/route" method="post">
+    <form action="/route" method="post">
+        <fieldset>
             <label for="email">Email: </label> <input type="text" id="email" name="email" required> <br>
             <label for="birthdate">Fecha den nacimiento: </label> <input type="date" id="birthdate" required> <br>
             
-            <label for="gender">Género: </label>
-            <input type="radio" id="gender" name="gender" value="male" required> Masculino
-            <input type="radio" id="gender" name="gender" value="female" required> Femenino
-            <input type="radio" id="gender" name="gender" value="nonbinary" required> No binario
-            <input type="radio" id="gender" name="gender" value="anonym" required> Prefiero no decir <br>
+            <label>Género: </label>
+            <input type="radio" id="gender-male" name="gender" value="male" required>
+            <label for="gender-male">Masculino</label>
+            <input type="radio" id="gender-female" name="gender" value="female" required>
+            <label for="gender-female">Femenino</label>
+            <input type="radio" id="gender-nonbinary" name="gender" value="nonbinary" required>
+            <label for="gender-nonbinary">No binario</label>
+            <input type="radio" id="gender-other" name="gender" value="anonym" required>
+            <label for="gender-nonbinary">Prefiero no decir</label> 
+            <br>
+
+            <!-- <label>Género:</label>
+            <input type="radio" name="genero" value="male"> Masculino
+            <input type="radio" name="genero" value="female"> Femenino
+            <input type="radio" name="genero" value="nonbinary"> No binario
+            <input type="radio" name="genero" value="other"> Prefiero no decir
+            <br> -->
 
             <label for="favoritecolor">Color favorito: </label>
             <select id="favoritecolor" name="favoritecolor">
@@ -38,13 +50,20 @@
             </select> <br>
 
             <label for="volume">Volumen inicial: </label>
-            <input type="range" id="volume" name="volume" min="0" max="11" value="8"> <br>
+            <input type="range" id="volume" name="volume" min="0" max="11" value="8"
+            oninput="currentValue.value = volume.value">
+            <output for="volume" id="currentValue">8</output> <br>
             
             <label for="tandc">Aceptar condiciones: </label> <input id="tandc" name="tandc" type="checkbox" required> <br>
 
             <input type="submit" value="Register">
         
-        </form>
-    </fieldset>
+        </fieldset>
+    </form>
+
+    <video width="520" height="340" preload muted loop autoplay>
+        <source src="https://download.samplelib.com/mp4/sample-5s.mp4" type="video/mp4">
+    </video>
+
 </body>
 </html>
