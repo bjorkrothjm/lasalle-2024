@@ -8,40 +8,43 @@
     </style>
 </head>
 <body>
-    <form action="/route" method="post">
-        <label>Email: </label> <input type="text" name="email" required> <br>
-        <label>Fecha den nacimiento: </label> <input type="date" required> <br>
+    <h1>Formulario de registro para LSMusic</h1>
+    <fieldset>
+        <form action="/route" method="post">
+            <label for="email">Email: </label> <input type="text" id="email" name="email" required> <br>
+            <label for="birthdate">Fecha den nacimiento: </label> <input type="date" id="birthdate" required> <br>
+            
+            <label for="gender">Género: </label>
+            <input type="radio" id="gender" name="gender" value="male" required> Masculino
+            <input type="radio" id="gender" name="gender" value="female" required> Femenino
+            <input type="radio" id="gender" name="gender" value="nonbinary" required> No binario
+            <input type="radio" id="gender" name="gender" value="anonym" required> Prefiero no decir <br>
+
+            <label for="favoritecolor">Color favorito: </label>
+            <select id="favoritecolor" name="favoritecolor">
+                <option value="blue">Azul</option>
+                <option value="red" selected>Rojo</option>
+                <option value="green">Verde</option>
+                <option value="yellow">Amarilla</option>
+            </select> <br>
+
+            <label for="favoritemusic">Género de música favorito: </label>
+            <select id="favoritemusic" name="favoritemusic">
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="blues">Blues</option>
+                <option value="jazz">Jazz</option>
+                <option value="classic">Classica</option>
+            </select> <br>
+
+            <label for="volume">Volumen inicial: </label>
+            <input type="range" id="volume" name="volume" min="0" max="11" value="8"> <br>
+            
+            <label for="tandc">Aceptar condiciones: </label> <input id="tandc" name="tandc" type="checkbox" required> <br>
+
+            <input type="submit" value="Register">
         
-        <label>Género: </label>
-        <input type="radio" name="gender" value="male" required> Masculino
-        <input type="radio" name="gender" value="female" required> Femenino
-        <input type="radio" name="gender" value="nonbinary" required> No binario
-        <input type="radio" name="gender" value="anonym" required> Prefiero no decir <br>
-
-        <label>Color favorito: </label>
-        <select>
-            <option value="blue">Azul</option>
-            <option value="red" selected>Rojo</option>
-            <option value="green">Verde</option>
-            <option value="yellow">Amarilla</option>
-        </select> <br>
-
-        <label>Género de música favorito: </label>
-        <select>
-            <option value="rock">Rock</option>
-            <option value="pop">Pop</option>
-            <option value="blues">Blues</option>
-            <option value="jazz">Jazz</option>
-            <option value="classic">Classica</option>
-        </select> <br>
-
-        <label>Volumen inicial: </label>
-        <input type="range" id="vol" name="vol" min="0" max="11" value="8"> <br>
-        
-        <label>Aceptar condiciones: </label> <input type="checkbox" required> <br>
-
-        <input type="submit" value="Register">
-
-    </form>
+        </form>
+    </fieldset>
 </body>
 </html>
